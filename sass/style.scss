@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 20px;
 }
 /*
  * body
@@ -62,7 +61,35 @@ main {
   h2 {
     @extend .iconfontionnement;
   }
-  #iconphone {
+  .iconphone,
+  .iconlist,
+  .iconstore {
     @extend .iconfontionnement;
+    margin-bottom: 18px;
+    background-color: #f2f2f2;
+    height: 80px;
+    width: 378px;
+    border-radius: 21px;
+    box-shadow: 0px 1px 5px 0px grey;
+    margin-left: 72px;
+    i {
+      padding-left: 28px;
+      font-size: 25px;
+    }
+    p {
+      padding-left: 20px;
+      font-size: 20px;
+    }
+  }
+}
+.iconphone,
+.iconlist {
+  i {
+    color: gray;
+  }
+}
+.iconstore {
+  i {
+    color: #9356dc;
   }
 }
