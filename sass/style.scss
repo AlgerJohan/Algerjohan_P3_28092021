@@ -18,7 +18,11 @@
 body {
   font-family: "Raleway", sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
+/*
+ * header
+ */
 header {
   @extend .placement;
   height: 130px;
@@ -26,15 +30,18 @@ header {
 
 #icon {
   @extend .placement;
-  background-color: lightgray;
+  background-color: #eaeaea;
   box-shadow: -0px -1px 6px grey;
   height: 130px;
   p {
     padding-left: 20px;
   }
 }
-
+/*
+ * Main
+ */
 main {
+  font-family: "Roboto", sans-serif;
   h1 {
     @extend .placement;
   }
@@ -44,7 +51,7 @@ main {
 }
 #couleurdefond {
   @extend .placement;
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   height: 572px;
   .gradient {
     @extend .placement;
@@ -57,6 +64,9 @@ main {
     box-shadow: 0px 1px 5px 0px grey;
   }
 }
+/*
+ * Fonctinnement
+ */
 #fonctionnement {
   h2 {
     @extend .iconfontionnement;
@@ -66,7 +76,7 @@ main {
   .iconstore {
     @extend .iconfontionnement;
     margin-bottom: 18px;
-    background-color: #f2f2f2;
+    background-color: #f6f6f6;
     height: 80px;
     width: 378px;
     border-radius: 21px;
@@ -85,11 +95,84 @@ main {
 .iconphone,
 .iconlist {
   i {
-    color: gray;
+    color: #7e7e7e;
   }
 }
 .iconstore {
   i {
     color: #9356dc;
+  }
+}
+/*
+ * Restaurants
+ */
+#restaurants {
+  background-color: #f6f6f6;
+  .lapalettedugout,
+  .lanotenchantee,
+  .alafrançaise,
+  .ledelicedessens {
+    img {
+      width: 100%;
+      max-width: 1000px;
+      min-width: 500px;
+      object-fit: cover;
+      border-radius: 17px 17px 0 0;
+    }
+  }
+}
+.lapalettedugout,
+.lanotenchantee,
+.alafrançaise,
+.ledelicedessens {
+  background-color: white;
+  box-shadow: 0px 1px 5px 0px grey;
+  border-radius: 17px;
+  margin-bottom: 25px;
+}
+.description {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  min-width: 500px;
+  margin-left: 14px;
+  font-size: 20px;
+}
+/*
+  * footer
+  */
+footer {
+  background-color: #353535;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  h3 {
+    font-family: "Shrikhand", cursive;
+    margin-bottom: 14px;
+  }
+}
+#ohmyfood {
+  margin-left: 15px;
+  .proposerunresataurant,
+  .devenirpartenaire {
+    display: flex;
+    align-content: center;
+    align-items: flex-end;
+    p {
+      padding-left: 14px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+.proposerunresataurant {
+  i {
+    font-size: 22px;
+  }
+}
+#ohmyfood {
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 14px 0 -4px 0;
   }
 }
