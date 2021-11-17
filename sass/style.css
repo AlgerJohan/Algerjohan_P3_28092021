@@ -14,6 +14,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .iconfontionnement, #fonctionnement h2, #fonctionnement .iconphone,
@@ -35,22 +39,35 @@
  */
 body {
   font-family: "Raleway", sans-serif;
-  margin: 0;
   overflow-x: hidden;
+  max-width: 1870px;
+  margin: 0 auto;
 }
 
 /*
  * header
  */
 header {
-  height: 130px;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 5px 0px grey;
+          box-shadow: 0px 1px 5px 0px grey;
 }
 
 #icon {
   background-color: #eaeaea;
   -webkit-box-shadow: -0px -1px 6px grey;
           box-shadow: -0px -1px 6px grey;
-  height: 130px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 40px;
 }
 
 #icon p {
@@ -89,12 +106,12 @@ main {
 #fonctionnement .iconstore {
   margin-bottom: 18px;
   background-color: #f6f6f6;
-  height: 80px;
-  width: 378px;
+  height: 134px;
+  width: 100%;
   border-radius: 21px;
   -webkit-box-shadow: 0px 1px 5px 0px grey;
           box-shadow: 0px 1px 5px 0px grey;
-  margin-left: 72px;
+  margin-right: 12px;
 }
 
 #fonctionnement .iconphone i,
@@ -111,6 +128,13 @@ main {
   font-size: 20px;
 }
 
+.boîte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 45px 0 82px 0;
+}
+
 .iconphone i,
 .iconlist i {
   color: #7e7e7e;
@@ -120,6 +144,19 @@ main {
   color: #9356dc;
 }
 
+.iconphone span,
+.iconlist span,
+.iconstore span {
+  background-color: #9356dc;
+  color: white;
+  font-size: 29px;
+  border-radius: 36px;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  margin-left: -16px;
+}
+
 /*
  * Restaurants
  */
@@ -127,36 +164,87 @@ main {
   background-color: #f6f6f6;
 }
 
-#restaurants .lapalettedugout img,
-#restaurants .lanotenchantee img,
-#restaurants .alafrançaise img,
-#restaurants .ledelicedessens img {
+#restaurants #container {
+  height: auto;
   width: 100%;
-  max-width: 1000px;
-  min-width: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 17px 17px 0 0;
+  max-width: 1870px;
+  min-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.lapalettedugout,
-.lanotenchantee,
-.alafrançaise,
-.ledelicedessens {
+#restaurants article img {
+  width: 100%;
+  height: 540px;
+  border-radius: 37px 37px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+article {
   background-color: white;
   -webkit-box-shadow: 0px 1px 5px 0px grey;
           box-shadow: 0px 1px 5px 0px grey;
-  border-radius: 17px;
+  border-radius: 37px;
   margin-bottom: 25px;
+  width: 870px;
+  height: 704px;
+  position: relative;
 }
 
-.description {
-  width: 100%;
-  height: auto;
-  max-width: 1000px;
-  min-width: 500px;
-  margin-left: 14px;
-  font-size: 20px;
+article p {
+  padding-bottom: 30px;
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+article h4 {
+  padding-left: 20px;
+  font-size: 34px;
+  margin-bottom: -16px;
+}
+
+article span {
+  position: absolute;
+  background-color: #99e2d0;
+  color: #008766;
+  font-size: 28px;
+  left: 69%;
+  top: 4%;
+  border-radius: 4px;
+  width: 25%;
+  height: 7%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.placementtextecoeur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.placementtextecoeur i {
+  font-size: 45px;
+}
+
+.placementtextecoeur i:hover {
+  color: #9356dc;
+}
+
+.placementtextecoeur .textecoeur {
+  -webkit-box-flex: 0.9;
+      -ms-flex-positive: 0.9;
+          flex-grow: 0.9;
 }
 
 /*
@@ -171,6 +259,7 @@ footer {
 footer h3 {
   font-family: "Shrikhand", cursive;
   margin-bottom: 14px;
+  font-size: 40px;
 }
 
 #ohmyfood {
@@ -192,7 +281,7 @@ footer h3 {
 #ohmyfood .proposerunresataurant p,
 #ohmyfood .devenirpartenaire p {
   padding-left: 14px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -201,7 +290,7 @@ footer h3 {
 }
 
 #ohmyfood p {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
   margin: 14px 0 -4px 0;
 }
