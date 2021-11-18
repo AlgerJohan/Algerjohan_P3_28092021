@@ -2,7 +2,7 @@
 /*
  * extention for scss
  */
-.placement, header, #icon, main h1, main h2, #couleurdefond, #couleurdefond .gradient {
+.placement, header, #icon, main h1, main h2, #reservationmenu, #reservationmenu .gradient {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,9 +29,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 /*
@@ -67,7 +64,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 40px;
+  font-size: 22px;
 }
 
 #icon p {
@@ -81,12 +78,25 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
-#couleurdefond {
+#reservationmenu {
   background-color: #f6f6f6;
-  height: 572px;
+  height: 480px;
 }
 
-#couleurdefond .gradient {
+#reservationmenu h1 {
+  font-size: 38px;
+  width: 63%;
+  text-align: center;
+}
+
+#reservationmenu h2 {
+  width: 424px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: inherit;
+}
+
+#reservationmenu .gradient {
   background: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(80%, #9356dc));
   background: linear-gradient(90deg, #ff79da 0%, #9356dc 80%);
   color: white;
@@ -101,17 +111,29 @@ main {
 /*
  * Fonctinnement
  */
+#fonctionnement {
+  margin-top: 6%;
+}
+
+#fonctionnement h2 {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin-left: 77px;
+  font-size: 35px;
+}
+
 #fonctionnement .iconphone,
 #fonctionnement .iconlist,
 #fonctionnement .iconstore {
   margin-bottom: 18px;
   background-color: #f6f6f6;
   height: 134px;
-  width: 100%;
+  width: 472px;
   border-radius: 21px;
-  -webkit-box-shadow: 0px 1px 5px 0px grey;
-          box-shadow: 0px 1px 5px 0px grey;
-  margin-right: 12px;
+  -webkit-box-shadow: 0px 0px 54px 4px #bdbdbd;
+          box-shadow: 0px 0px 54px 4px #bdbdbd;
+  margin-right: 62px;
+  margin-left: 89px;
 }
 
 #fonctionnement .iconphone i,
@@ -126,13 +148,22 @@ main {
 #fonctionnement .iconstore p {
   padding-left: 20px;
   font-size: 20px;
+  font-weight: bold;
+}
+
+#fonctionnement .iconphone:hover,
+#fonctionnement .iconlist:hover,
+#fonctionnement .iconstore:hover {
+  background-color: #f5edff;
 }
 
 .boîte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 45px 0 82px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 87px 0 82px 0;
 }
 
 .iconphone i,
@@ -162,6 +193,7 @@ main {
  */
 #restaurants {
   background-color: #f6f6f6;
+  height: auto;
 }
 
 #restaurants #container {
@@ -174,9 +206,9 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #restaurants article img {
@@ -185,6 +217,16 @@ main {
   border-radius: 37px 37px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.restaucard {
+  padding-top: 4%;
+  padding-bottom: 7%;
+}
+
+.restaucard h3 {
+  font-size: 45px;
+  margin-left: 48px;
 }
 
 article {
@@ -260,6 +302,7 @@ footer h3 {
   font-family: "Shrikhand", cursive;
   margin-bottom: 14px;
   font-size: 40px;
+  margin-top: 0px;
 }
 
 #ohmyfood {
