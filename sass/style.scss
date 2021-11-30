@@ -8,7 +8,7 @@
   justify-content: center;
   flex-direction: column;
 }
-.iconfontionnement {
+.icon_fontionnement {
   display: flex;
   align-items: center;
 }
@@ -16,10 +16,11 @@
  * body
  */
 body {
-  font-family: "Raleway", sans-serif;
   overflow-x: hidden;
   max-width: 1870px;
+  min-width: 400px;
   margin: 0 auto;
+  margin-top: 150px;
 }
 /*
  * header
@@ -27,15 +28,24 @@ body {
 header {
   @extend .placement;
   width: 100%;
-  height: 150px;
+  height: auto;
   background-color: white;
-  box-shadow: 0px 1px 5px 0px grey;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 58px;
+    margin-bottom: 0;
+  }
 }
 
 #icon {
   @extend .placement;
   background-color: #eaeaea;
-  box-shadow: -0px -1px 6px grey;
+  box-shadow: 0px -2px 4px -1px grey;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -49,23 +59,23 @@ header {
  */
 main {
   font-family: "Roboto", sans-serif;
-  h1 {
+  h2 {
     @extend .placement;
   }
-  h2 {
+  h3 {
     @extend .placement;
   }
 }
-#reservationmenu {
+#reservation_menu {
   @extend .placement;
   background-color: #f6f6f6;
   height: 480px;
-  h1 {
+  h2 {
     font-size: 38px;
-    width: 63%;
+    width: 76%;
     text-align: center;
   }
-  h2 {
+  h3 {
     width: 424px;
     font-size: 25px;
     text-align: center;
@@ -81,6 +91,7 @@ main {
     border-radius: 40px;
     width: 55%;
     box-shadow: 0px 1px 5px 0px grey;
+    text-align: center;
   }
 }
 /*
@@ -89,18 +100,18 @@ main {
 #fonctionnement {
   margin-top: 6%;
   h2 {
-    @extend .iconfontionnement;
+    @extend .icon_fontionnement;
     align-content: flex-start;
     margin-left: 77px;
     font-size: 35px;
   }
-  .iconphone,
-  .iconlist,
-  .iconstore {
-    @extend .iconfontionnement;
+  .icon_phone,
+  .icon_list,
+  .icon_store {
+    @extend .icon_fontionnement;
     margin-bottom: 18px;
     background-color: #f6f6f6;
-    height: 134px;
+    height: 100px;
     width: 472px;
     border-radius: 21px;
     box-shadow: 0px 0px 54px 4px #bdbdbd;
@@ -118,9 +129,9 @@ main {
   }
 }
 #fonctionnement {
-  .iconphone:hover,
-  .iconlist:hover,
-  .iconstore:hover {
+  .icon_phone:hover,
+  .icon_list:hover,
+  .icon_store:hover {
     background-color: #f5edff;
   }
 }
@@ -129,21 +140,22 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin: 87px 0 82px 0;
+  justify-content: center;
 }
-.iconphone,
-.iconlist {
+.icon_phone,
+.icon_list {
   i {
     color: #7e7e7e;
   }
 }
-.iconstore {
+.icon_store {
   i {
     color: #9356dc;
   }
 }
-.iconphone,
-.iconlist,
-.iconstore {
+.icon_phone,
+.icon_list,
+.icon_store {
   span {
     background-color: #9356dc;
     color: white;
@@ -170,6 +182,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
   }
   article {
     img {
@@ -180,7 +196,7 @@ main {
     }
   }
 }
-.restaucard {
+.restau_card {
   padding-top: 4%;
   padding-bottom: 7%;
   h3 {
@@ -222,20 +238,30 @@ article {
     padding-top: 15px;
   }
 }
-.placementtextecoeur {
+.placement_texte_coeur {
   display: flex;
   align-items: center;
   i {
     font-size: 45px;
   }
-  i:hover {
-    color: #9356dc;
-  }
-  .textecoeur {
+  .texte_coeur {
     flex-grow: 0.9;
   }
 }
-
+.placement_texte_coeur i {
+  position: absolute;
+  bottom: 48px;
+  right: 66px;
+}
+.btn_heart {
+  opacity: 0;
+  color: #ff79da;
+  transition: color 0.8s ease-in-out;
+}
+.btn_heart:hover {
+  opacity: 1;
+  color: #9356dc;
+}
 /*
   * footer
   */
@@ -251,9 +277,14 @@ footer {
   }
 }
 #ohmyfood {
-  margin-left: 15px;
-  .proposerunresataurant,
-  .devenirpartenaire {
+  margin-left: 60px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .proposer_restaurant,
+  .devenir_partenaire {
     display: flex;
     align-content: center;
     align-items: flex-end;
@@ -264,7 +295,7 @@ footer {
     }
   }
 }
-.proposerunresataurant {
+.proposer_restaurant {
   i {
     font-size: 22px;
   }

@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto,&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,35 +24,35 @@
   <body>
     <!-- Header -->
     <header>
-      <img src="./img/logo/ohmyfood.png" alt="ohmyfood" />
+      <h1>ohmyfood</h1>
     </header>
     <main>
       <div id="icon">
         <i class="fas fa-map-marker-alt"></i>
         <p>Paris, Bellville</p>
       </div>
-      <div id="reservationmenu">
-        <h1>Réservez le menu qui vous convient</h1>
-        <h2>
+      <div id="reservation_menu">
+        <h2>Réservez le menu qui vous convient</h2>
+        <h3>
           Découvrez les restaurants d'exeption, séléctionnés par nos soins.
-        </h2>
+        </h3>
         <p class="gradient">Explorer nos restaurants</p>
       </div>
       <!-- Fonctionnement -->
       <section id="fonctionnement">
         <h2>Fonctionnement</h2>
         <div class="boîte">
-          <div class="iconphone">
+          <div class="icon_phone">
             <span>1</span>
             <i class="fas fa-mobile-alt"></i>
             <p>Choisissez un restaurant</p>
           </div>
-          <div class="iconlist">
+          <div class="icon_list">
             <span>2</span>
             <i class="fas fa-list-ul"></i>
             <p>Composez votre menu</p>
           </div>
-          <div class="iconstore">
+          <div class="icon_store">
             <span>3</span>
             <i class="fas fa-store"></i>
             <p>Dégustez au restaurant</p>
@@ -57,65 +61,72 @@
       </section>
       <!-- Restaurant -->
       <section id="restaurants">
-        <div class="restaucard">
+        <div class="restau_card">
           <h3>Restaurants</h3>
           <div id="container">
             <article>
-              <span>Nouveau</span>
-              <img
-                src="./img/restaurants/lapalettedugoût.jpg"
-                alt="La palette du goût"
-                title="La palette du goût"
-              />
-              <div class="placementtextecoeur">
-                <div class="textecoeur">
-                  <h4>La palette du goût</h4>
-                  <p>Ménilmontant</p>
-                </div>
-                <i class="far fa-heart"></i>
-              </div>
+              <a
+                href="./restaurants/le_bon_staeck_fancais.html"
+                target="_blank"
+              >
+                <span>Nouveau</span>
+                <img
+                  src="./img/steakfrançais.jpg"
+                  alt="Le bon steack français"
+                  title="Le bon steack français" />
+                <div class="placement_texte_coeur">
+                  <div class="texte_coeur">
+                    <h4>Le bon steack français</h4>
+                    <p>Nanterre</p>
+                  </div>
+                  <i class="far fa-heart"></i>
+                  <i class="fas fa-heart btn_heart"></i></div
+              ></a>
             </article>
             <article>
               <span>Nouveau</span>
               <img
-                src="./img/restaurants/lanoteenchantée.jpg"
-                alt="La note enchantée"
-                title="La note enchantée"
+                src="./img/pastacrevettes.jpg"
+                alt="La petite crevette"
+                title="La petite crevette"
               />
-              <div class="placementtextecoeur">
-                <div class="textecoeur">
-                  <h4>La note enchantée</h4>
-                  <p>Charonne</p>
+              <div class="placement_texte_coeur">
+                <div class="texte_coeur">
+                  <h4>La petite crevette</h4>
+                  <p>Suresne</p>
                 </div>
                 <i class="far fa-heart"></i>
+                <i class="fas fa-heart btn_heart"></i>
               </div>
             </article>
             <article>
               <img
-                src="./img/restaurants/alafrançaise.jpg"
-                alt="À la française"
-                title="À la française"
+                src="./img/pastapesto.jpg"
+                alt="À l'italienne"
+                title="À l'italienne"
               />
-              <div class="placementtextecoeur">
-                <div class="textecoeur">
-                  <h4>À la française</h4>
-                  <p>Cité Rouge</p>
+              <div class="placement_texte_coeur">
+                <div class="texte_coeur">
+                  <h4>À l'italienne</h4>
+                  <p>Puteaux</p>
                 </div>
                 <i class="far fa-heart"></i>
+                <i class="fas fa-heart btn_heart"></i>
               </div>
             </article>
             <article>
               <img
-                src="./img/restaurants/ledélicedessens.jpg"
-                alt="Le délice des sens"
-                title="Le délice des sens"
+                src="./img/saumon.jpg"
+                alt="Le délicieux saumon"
+                title="Le délicieux saumon"
               />
-              <div class="placementtextecoeur">
-                <div class="textecoeur">
-                  <h4>Le délice des sens</h4>
-                  <p>Folie-Méricourt</p>
+              <div class="placement_texte_coeur">
+                <div class="texte_coeur">
+                  <h4>Le délicieux saumon</h4>
+                  <p>La Défense</p>
                 </div>
                 <i class="far fa-heart"></i>
+                <i class="fas fa-heart btn_heart"></i>
               </div>
             </article>
           </div>
@@ -125,11 +136,11 @@
     <footer>
       <div id="ohmyfood">
         <h3>ohmyfood</h3>
-        <div class="proposerunresataurant">
+        <div class="proposer_restaurant">
           <i class="fas fa-utensils"></i>
           <p>Proposer un restaurant</p>
         </div>
-        <div class="devenirpartenaire">
+        <div class="devenir_partenaire">
           <i class="fas fa-hands-helping"></i>
           <p>Devenir partenaire</p>
         </div>

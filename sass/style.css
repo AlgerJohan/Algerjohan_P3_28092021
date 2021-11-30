@@ -2,7 +2,7 @@
 /*
  * extention for scss
  */
-.placement, header, #icon, main h1, main h2, #reservationmenu, #reservationmenu .gradient {
+.placement, header, #icon, main h2, main h3, #reservation_menu, #reservation_menu .gradient {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,9 +20,9 @@
           flex-direction: column;
 }
 
-.iconfontionnement, #fonctionnement h2, #fonctionnement .iconphone,
-#fonctionnement .iconlist,
-#fonctionnement .iconstore {
+.icon_fontionnement, #fonctionnement h2, #fonctionnement .icon_phone,
+#fonctionnement .icon_list,
+#fonctionnement .icon_store {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,10 +35,11 @@
  * body
  */
 body {
-  font-family: "Raleway", sans-serif;
   overflow-x: hidden;
   max-width: 1870px;
+  min-width: 400px;
   margin: 0 auto;
+  margin-top: 150px;
 }
 
 /*
@@ -46,16 +47,25 @@ body {
  */
 header {
   width: 100%;
-  height: 150px;
+  height: auto;
   background-color: white;
-  -webkit-box-shadow: 0px 1px 5px 0px grey;
-          box-shadow: 0px 1px 5px 0px grey;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 58px;
+  margin-bottom: 0;
 }
 
 #icon {
   background-color: #eaeaea;
-  -webkit-box-shadow: -0px -1px 6px grey;
-          box-shadow: -0px -1px 6px grey;
+  -webkit-box-shadow: 0px -2px 4px -1px grey;
+          box-shadow: 0px -2px 4px -1px grey;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,25 +88,25 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
-#reservationmenu {
+#reservation_menu {
   background-color: #f6f6f6;
   height: 480px;
 }
 
-#reservationmenu h1 {
+#reservation_menu h2 {
   font-size: 38px;
-  width: 63%;
+  width: 76%;
   text-align: center;
 }
 
-#reservationmenu h2 {
+#reservation_menu h3 {
   width: 424px;
   font-size: 25px;
   text-align: center;
   font-weight: inherit;
 }
 
-#reservationmenu .gradient {
+#reservation_menu .gradient {
   background: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(80%, #9356dc));
   background: linear-gradient(90deg, #ff79da 0%, #9356dc 80%);
   color: white;
@@ -106,6 +116,7 @@ main {
   width: 55%;
   -webkit-box-shadow: 0px 1px 5px 0px grey;
           box-shadow: 0px 1px 5px 0px grey;
+  text-align: center;
 }
 
 /*
@@ -122,12 +133,12 @@ main {
   font-size: 35px;
 }
 
-#fonctionnement .iconphone,
-#fonctionnement .iconlist,
-#fonctionnement .iconstore {
+#fonctionnement .icon_phone,
+#fonctionnement .icon_list,
+#fonctionnement .icon_store {
   margin-bottom: 18px;
   background-color: #f6f6f6;
-  height: 134px;
+  height: 100px;
   width: 472px;
   border-radius: 21px;
   -webkit-box-shadow: 0px 0px 54px 4px #bdbdbd;
@@ -136,24 +147,24 @@ main {
   margin-left: 89px;
 }
 
-#fonctionnement .iconphone i,
-#fonctionnement .iconlist i,
-#fonctionnement .iconstore i {
+#fonctionnement .icon_phone i,
+#fonctionnement .icon_list i,
+#fonctionnement .icon_store i {
   padding-left: 28px;
   font-size: 25px;
 }
 
-#fonctionnement .iconphone p,
-#fonctionnement .iconlist p,
-#fonctionnement .iconstore p {
+#fonctionnement .icon_phone p,
+#fonctionnement .icon_list p,
+#fonctionnement .icon_store p {
   padding-left: 20px;
   font-size: 20px;
   font-weight: bold;
 }
 
-#fonctionnement .iconphone:hover,
-#fonctionnement .iconlist:hover,
-#fonctionnement .iconstore:hover {
+#fonctionnement .icon_phone:hover,
+#fonctionnement .icon_list:hover,
+#fonctionnement .icon_store:hover {
   background-color: #f5edff;
 }
 
@@ -164,20 +175,23 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 87px 0 82px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.iconphone i,
-.iconlist i {
+.icon_phone i,
+.icon_list i {
   color: #7e7e7e;
 }
 
-.iconstore i {
+.icon_store i {
   color: #9356dc;
 }
 
-.iconphone span,
-.iconlist span,
-.iconstore span {
+.icon_phone span,
+.icon_list span,
+.icon_store span {
   background-color: #9356dc;
   color: white;
   font-size: 29px;
@@ -211,6 +225,11 @@ main {
           justify-content: space-evenly;
 }
 
+#restaurants #container a {
+  text-decoration: none;
+  color: #000;
+}
+
 #restaurants article img {
   width: 100%;
   height: 540px;
@@ -219,12 +238,12 @@ main {
      object-fit: cover;
 }
 
-.restaucard {
+.restau_card {
   padding-top: 4%;
   padding-bottom: 7%;
 }
 
-.restaucard h3 {
+.restau_card h3 {
   font-size: 45px;
   margin-left: 48px;
 }
@@ -266,7 +285,7 @@ article span {
   padding-top: 15px;
 }
 
-.placementtextecoeur {
+.placement_texte_coeur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,18 +294,32 @@ article span {
           align-items: center;
 }
 
-.placementtextecoeur i {
+.placement_texte_coeur i {
   font-size: 45px;
 }
 
-.placementtextecoeur i:hover {
-  color: #9356dc;
-}
-
-.placementtextecoeur .textecoeur {
+.placement_texte_coeur .texte_coeur {
   -webkit-box-flex: 0.9;
       -ms-flex-positive: 0.9;
           flex-grow: 0.9;
+}
+
+.placement_texte_coeur i {
+  position: absolute;
+  bottom: 48px;
+  right: 66px;
+}
+
+.btn_heart {
+  opacity: 0;
+  color: #ff79da;
+  -webkit-transition: color 0.8s ease-in-out;
+  transition: color 0.8s ease-in-out;
+}
+
+.btn_heart:hover {
+  opacity: 1;
+  color: #9356dc;
 }
 
 /*
@@ -306,11 +339,25 @@ footer h3 {
 }
 
 #ohmyfood {
-  margin-left: 15px;
+  margin-left: 60px;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-#ohmyfood .proposerunresataurant,
-#ohmyfood .devenirpartenaire {
+#ohmyfood .proposer_restaurant,
+#ohmyfood .devenir_partenaire {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,14 +368,14 @@ footer h3 {
           align-items: flex-end;
 }
 
-#ohmyfood .proposerunresataurant p,
-#ohmyfood .devenirpartenaire p {
+#ohmyfood .proposer_restaurant p,
+#ohmyfood .devenir_partenaire p {
   padding-left: 14px;
   font-size: 30px;
   font-weight: 500;
 }
 
-.proposerunresataurant i {
+.proposer_restaurant i {
   font-size: 22px;
 }
 

@@ -1,0 +1,195 @@
+.placement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.iconfontionnement {
+  display: flex;
+  align-items: center;
+}
+body {
+  overflow-x: hidden;
+  max-width: 1870px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+/*
+ * header
+ */
+header {
+  @extend .placement;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 58px;
+    padding-left: 8%;
+  }
+  .fa-arrow-left {
+    font-size: 58px;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+.titre {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h2 {
+    font-family: "Shrikhand", cursive;
+    font-size: 58px;
+    padding-left: 8%;
+  }
+  i {
+    font-size: 48px;
+  }
+}
+/*
+ * Main
+ */
+main {
+  font-family: "Roboto", sans-serif;
+}
+/*
+ *image
+ */
+#container {
+  height: auto;
+  width: 100%;
+  max-width: 1870px;
+  min-width: 400px;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+#background {
+  background-color: #f6f6f6;
+}
+/*
+ * section
+ */
+section {
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+section h3 {
+  border-bottom: 4px solid #99e2d0;
+  width: 58px;
+  height: 41px;
+  font-size: 35px;
+  margin-left: 42px;
+}
+.carte {
+  height: 106px;
+  width: 472px;
+  border-radius: 21px;
+  -webkit-box-shadow: 0px 0px 54px 4px #bdbdbd;
+  box-shadow: 0px 0px 11px -2px #bdbdbd;
+  margin-bottom: 20px;
+  background-color: white;
+  h4,
+  p {
+    padding-left: 34px;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+  }
+}
+.carte {
+  p {
+    position: relative;
+  }
+  span {
+    position: absolute;
+    right: 15px;
+  }
+}
+.carte {
+  .hover {
+    position: relative;
+    top: -90px;
+    right: -350px;
+    height: 106px;
+    width: 122px;
+    background-color: #99e2d0;
+    color: white;
+    border-radius: 0 21px 21px 0;
+  }
+  .fa-check-circle {
+    position: absolute;
+    font-size: 34px;
+    top: 35px;
+    left: 41px;
+  }
+}
+.bouton {
+  display: flex;
+  justify-content: center;
+  .commander {
+    @extend .placement;
+    background: linear-gradient(90deg, #ff79da 0%, #9356dc 80%);
+    color: white;
+    font-size: 25px;
+    height: 80px;
+    border-radius: 40px;
+    width: 36%;
+    box-shadow: 0px 1px 5px 0px grey;
+  }
+}
+/*
+  * footer
+  */
+footer {
+  background-color: #353535;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  h3 {
+    font-family: "Shrikhand", cursive;
+    margin-bottom: 14px;
+    font-size: 40px;
+    margin-top: 0px;
+  }
+}
+#ohmyfood {
+  margin-left: 15px;
+  .proposer_restaurant,
+  .devenir_partenaire {
+    display: flex;
+    align-content: center;
+    align-items: flex-end;
+    p {
+      padding-left: 14px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+}
+.proposer_restaurant {
+  i {
+    font-size: 22px;
+  }
+}
+#ohmyfood {
+  p {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 14px 0 -4px 0;
+  }
+}
