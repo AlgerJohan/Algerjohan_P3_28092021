@@ -2,33 +2,106 @@
 /*
  * extention for scss
  */
-.placement, header, #icon, main h2, main h3, #reservation_menu, #reservation_menu .gradient {
+.placement,
+header,
+#icon,
+main h2,
+main h3,
+#reservation_menu,
+#reservation_menu .gradient {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.icon_fontionnement, #fonctionnement h2, #fonctionnement .icon_phone,
+.icon_fontionnement,
+#fonctionnement h2,
+#fonctionnement .icon_phone,
 #fonctionnement .icon_list,
 #fonctionnement .icon_store {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/*
+ * Loaderspinner
+ */
+.section_loader {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: -4px;
+  width: 1872px;
+  height: 176vh;
+  font-family: sans-serif;
+  font-size: 88px;
+  color: #99e2d0;
+  text-align: center;
+  line-height: 100vh;
+  background: linear-gradient(90deg, #ff79da 0%, #9356dc 80%);
+  opacity: 0;
+  animation: loader_opacity 1.5s ease-in;
+  z-index: -1;
+}
+.loader {
+  width: 93px;
+  height: 92px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.loader-quart {
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+.loader-quart:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #99e2d0;
+  animation: loader-quart 3s infinite;
+}
+@keyframes loader-quart {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader_opacity {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  50% {
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 /*
@@ -39,7 +112,6 @@ body {
   max-width: 1870px;
   min-width: 400px;
   margin: 0 auto;
-  margin-top: 150px;
 }
 
 /*
@@ -49,31 +121,29 @@ header {
   width: 100%;
   height: auto;
   background-color: white;
-  position: fixed;
+  position: sticky;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
+  box-shadow: 0px 7px 16px -3px grey;
 }
 
 header h1 {
   font-family: "Shrikhand", cursive;
   font-size: 58px;
-  margin-bottom: 0;
 }
 
 #icon {
   background-color: #eaeaea;
-  -webkit-box-shadow: 0px -2px 4px -1px grey;
-          box-shadow: 0px -2px 4px -1px grey;
-  height: auto;
+  height: 112px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   font-size: 22px;
 }
 
@@ -107,7 +177,13 @@ main {
 }
 
 #reservation_menu .gradient {
-  background: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(80%, #9356dc));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff79da),
+    color-stop(80%, #9356dc)
+  );
   background: linear-gradient(90deg, #ff79da 0%, #9356dc 80%);
   color: white;
   font-size: 25px;
@@ -115,7 +191,7 @@ main {
   border-radius: 40px;
   width: 55%;
   -webkit-box-shadow: 0px 1px 5px 0px grey;
-          box-shadow: 0px 1px 5px 0px grey;
+  box-shadow: 0px 1px 5px 0px grey;
   text-align: center;
 }
 
@@ -128,7 +204,7 @@ main {
 
 #fonctionnement h2 {
   -ms-flex-line-pack: start;
-      align-content: flex-start;
+  align-content: flex-start;
   margin-left: 77px;
   font-size: 35px;
 }
@@ -142,7 +218,7 @@ main {
   width: 472px;
   border-radius: 21px;
   -webkit-box-shadow: 0px 0px 54px 4px #bdbdbd;
-          box-shadow: 0px 0px 54px 4px #bdbdbd;
+  box-shadow: 0px 0px 54px 4px #bdbdbd;
   margin-right: 62px;
   margin-left: 89px;
 }
@@ -173,11 +249,11 @@ main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 87px 0 82px 0;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .icon_phone i,
@@ -219,10 +295,10 @@ main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 #restaurants #container a {
@@ -235,7 +311,7 @@ main {
   height: 540px;
   border-radius: 37px 37px 0 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .restau_card {
@@ -251,7 +327,7 @@ main {
 article {
   background-color: white;
   -webkit-box-shadow: 0px 1px 5px 0px grey;
-          box-shadow: 0px 1px 5px 0px grey;
+  box-shadow: 0px 1px 5px 0px grey;
   border-radius: 37px;
   margin-bottom: 25px;
   width: 870px;
@@ -290,18 +366,12 @@ article span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .placement_texte_coeur i {
   font-size: 45px;
-}
-
-.placement_texte_coeur .texte_coeur {
-  -webkit-box-flex: 0.9;
-      -ms-flex-positive: 0.9;
-          flex-grow: 0.9;
 }
 
 .placement_texte_coeur i {
@@ -346,14 +416,14 @@ footer h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 #ohmyfood .proposer_restaurant,
@@ -362,10 +432,10 @@ footer h3 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 #ohmyfood .proposer_restaurant p,
@@ -379,9 +449,12 @@ footer h3 {
   font-size: 22px;
 }
 
-#ohmyfood p {
+#ohmyfood p,
+a {
   font-size: 30px;
   font-weight: 500;
   margin: 14px 0 -4px 0;
+  text-decoration: none;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

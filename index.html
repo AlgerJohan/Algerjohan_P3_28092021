@@ -18,10 +18,15 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>ohmyfood</title>
   </head>
   <body>
+    <!-- Loaderspinner -->
+    <div class="section_loader">
+      <span class="loader loader-quart"></span>
+      Chargement...
+    </div>
     <!-- Header -->
     <header>
       <h1>ohmyfood</h1>
@@ -65,69 +70,72 @@
           <h3>Restaurants</h3>
           <div id="container">
             <article>
-              <a
-                href="./restaurants/le_bon_staeck_fancais.html"
-                target="_blank"
-              >
+              <a href="./lapalettedugoût.html">
                 <span>Nouveau</span>
                 <img
-                  src="./img/steakfrançais.jpg"
-                  alt="Le bon steack français"
-                  title="Le bon steack français" />
+                  src="./img/lapalettedugoût.jpg"
+                  alt="La palette du goût"
+                  title="La palette du goût" />
                 <div class="placement_texte_coeur">
                   <div class="texte_coeur">
-                    <h4>Le bon steack français</h4>
-                    <p>Nanterre</p>
+                    <h4>La palette du goût</h4>
+                    <p>Ménilmontant</p>
                   </div>
                   <i class="far fa-heart"></i>
                   <i class="fas fa-heart btn_heart"></i></div
               ></a>
             </article>
             <article>
-              <span>Nouveau</span>
-              <img
-                src="./img/pastacrevettes.jpg"
-                alt="La petite crevette"
-                title="La petite crevette"
-              />
-              <div class="placement_texte_coeur">
-                <div class="texte_coeur">
-                  <h4>La petite crevette</h4>
-                  <p>Suresne</p>
+              <a href="./lanoteenchantée.html">
+                <span>Nouveau</span>
+                <img
+                  src="./img/lanoteenchantée.jpg"
+                  alt="La note enchantée"
+                  title="La note enchantée"
+                />
+                <div class="placement_texte_coeur">
+                  <div class="texte_coeur">
+                    <h4>La note enchantée</h4>
+                    <p>Charonne</p>
+                  </div>
+                  <i class="far fa-heart"></i>
+                  <i class="fas fa-heart btn_heart"></i>
                 </div>
-                <i class="far fa-heart"></i>
-                <i class="fas fa-heart btn_heart"></i>
-              </div>
+              </a>
             </article>
             <article>
-              <img
-                src="./img/pastapesto.jpg"
-                alt="À l'italienne"
-                title="À l'italienne"
-              />
-              <div class="placement_texte_coeur">
-                <div class="texte_coeur">
-                  <h4>À l'italienne</h4>
-                  <p>Puteaux</p>
+              <a href="./alafrancaise.html">
+                <img
+                  src="./img/alafrançaise.jpg"
+                  alt="À la française"
+                  title="À la française"
+                />
+                <div class="placement_texte_coeur">
+                  <div class="texte_coeur">
+                    <h4>À la française</h4>
+                    <p>Cité Rouge</p>
+                  </div>
+                  <i class="far fa-heart"></i>
+                  <i class="fas fa-heart btn_heart"></i>
                 </div>
-                <i class="far fa-heart"></i>
-                <i class="fas fa-heart btn_heart"></i>
-              </div>
+              </a>
             </article>
             <article>
-              <img
-                src="./img/saumon.jpg"
-                alt="Le délicieux saumon"
-                title="Le délicieux saumon"
-              />
-              <div class="placement_texte_coeur">
-                <div class="texte_coeur">
-                  <h4>Le délicieux saumon</h4>
-                  <p>La Défense</p>
+              <a href="./ledélicedessens.html">
+                <img
+                  src="./img/ledélicedessens.jpg"
+                  alt="Le délice des sens"
+                  title="Le délice des sens"
+                />
+                <div class="placement_texte_coeur">
+                  <div class="texte_coeur">
+                    <h4>Le délice des sens</h4>
+                    <p>Folie-Méricourt</p>
+                  </div>
+                  <i class="far fa-heart"></i>
+                  <i class="fas fa-heart btn_heart"></i>
                 </div>
-                <i class="far fa-heart"></i>
-                <i class="fas fa-heart btn_heart"></i>
-              </div>
+              </a>
             </article>
           </div>
         </div>
@@ -145,7 +153,7 @@
           <p>Devenir partenaire</p>
         </div>
         <p>Mentions légales</p>
-        <p>Contact</p>
+        <a href="mailto:adresse@serveur.com">Contact</a>
       </div>
     </footer>
   </body>
