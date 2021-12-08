@@ -154,13 +154,18 @@ section {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 18px;
   }
   .prix {
     font-size: 18px;
     font-weight: bold;
     padding-right: 48px;
   }
+}
+.txt p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
 }
 .confirmation {
   position: absolute;
