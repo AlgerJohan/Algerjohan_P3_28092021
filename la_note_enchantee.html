@@ -18,8 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/restaurants.css" />
-    <title>ohmyfood</title>
+    <link rel="stylesheet" href="./sass/restaurants.css" />
+    <title>La note enchantée</title>
   </head>
   <body>
     <header>
@@ -29,42 +29,75 @@
     <!--main-->
     <main>
       <!--image-->
-      <div id="container">
+      <div id="container_img">
         <img
-          src="./img/lanoteenchantée.jpg"
+          src="./img/la_note_enchantee.jpg"
           alt="La note enchantée"
           title="La note enchantée"
         />
       </div>
-      <div id="background">
+      <div id="menu_global">
         <!--titre-->
         <div class="titre">
           <h2>La note enchantée</h2>
           <i class="far fa-heart"></i>
+          <i class="fas fa-heart btn_heart"></i>
         </div>
         <!--section-->
         <section>
           <h3>Entrées</h3>
           <div class="menu">
             <div class="carte">
-              <h4>Ravioles de foie gras</h4>
-              <p>Accompagnés de leur crème à la truffe <span>25€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Ravioles de foie gras</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Accompagnés de leur crème à la truffe</p>
+                </div>
+                <div class="prix">25€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Caviar osciètre</h4>
-              <p>Sur blini à la farine de blé noir<span>35€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Caviar osciètre</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Sur blini à la farine de blé noir</p>
+                </div>
+                <div class="prix">35€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Homard et espuma de potiron</h4>
-              <p>Mariné aux zestes d'orange<span>20€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Homard et espuma de potiron</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt"><p>Mariné aux zestes d'orange</p></div>
+                <div class="prix">20€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Foie gras de canard cuit entier</h4>
-              <p>Confiture de figue et pain toasté<span>35€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Foie gras de canard cuit entier</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt"><p>Confiture de figue et pain toasté</p></div>
+                <div class="prix">35€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
           </div>
         </section>
@@ -72,19 +105,46 @@
           <h3>Plats</h3>
           <div class="menu">
             <div class="carte">
-              <h4>Noix de coquilles Saint-Jacques</h4>
-              <p>Sur lit de purée de céleri-rave<span>40€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Noix de coquilles Saint-Jacques</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Sur lit de purée de céleri-rave</p>
+                </div>
+                <div class="prix">40€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Langoustine poêlée</h4>
-              <p>Purée de patate douce<span>35€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Langoustine poêlée</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Purée de patate douce</p>
+                </div>
+                <div class="prix">35€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Mijoté de queue de boeuf</h4>
-              <p>Et riz sauvage aux zestes de citron<span>44€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Mijoté de queue de boeuf</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Et riz sauvage aux zestes de citron</p>
+                </div>
+                <div class="prix">44€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
           </div>
         </section>
@@ -92,19 +152,46 @@
           <h3>Desserts</h3>
           <div class="menu">
             <div class="carte">
-              <h4>Macaron noisette et chocolat</h4>
-              <p>Glace au caramel brun et sel de Guérande<span>18€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Macaron noisette et chocolat</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Glace au caramel brun et sel de Guérande</p>
+                </div>
+                <div class="prix">18€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Baba au rhum revisité</h4>
-              <p>Avec son coulis de citron<span>22€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Baba au rhum revisité</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Avec son coulis de citron</p>
+                </div>
+                <div class="prix">22€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
             <div class="carte">
-              <h4>Tarte au citron meringuée</h4>
-              <p>Déstructurée<span>23€</span></p>
-              <div class="color"><i class="fas fa-check-circle"></i></div>
+              <div class="plats">
+                <h4>Tarte au citron meringuée</h4>
+              </div>
+              <div class="menu_plats">
+                <div class="txt">
+                  <p>Déstructurée</p>
+                </div>
+                <div class="prix">23€</div>
+              </div>
+              <div class="confirmation">
+                <div class="checked"><i class="fas fa-check-circle"></i></div>
+              </div>
             </div>
           </div>
         </section>

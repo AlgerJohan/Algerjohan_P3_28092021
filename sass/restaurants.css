@@ -74,8 +74,9 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -83,12 +84,27 @@ header a {
 
 .titre h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 58px;
+  font-size: 2.3rem;
   padding-left: 8%;
 }
 
 .titre i {
+  position: absolute;
   font-size: 48px;
+  right: 86px;
+}
+
+.btn_heart {
+  right: 211px;
+  opacity: 0;
+  color: #ff79da;
+  -webkit-transition: color 0.8s ease-in-out;
+  transition: color 0.8s ease-in-out;
+}
+
+.btn_heart:hover {
+  opacity: 1;
+  color: #9356dc;
 }
 
 /*
@@ -165,7 +181,7 @@ section h3 {
   width: 100%;
 }
 
-.carte h4 {
+.carte .plats h4 {
   width: 100%;
   font-size: 22px;
   margin: 0;
@@ -298,6 +314,17 @@ section h3 {
   width: 36%;
   -webkit-box-shadow: 0px 1px 5px 0px grey;
           box-shadow: 0px 1px 5px 0px grey;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.commander:hover {
+  -webkit-box-shadow: 0px 1px 5px 0px grey;
+          box-shadow: 0px 1px 5px 0px grey;
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+  -webkit-box-shadow: grey 0px 30px 60px -12px, grey 0px 18px 36px -18px;
+          box-shadow: grey 0px 30px 60px -12px, grey 0px 18px 36px -18px;
 }
 
 /*
