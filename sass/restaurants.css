@@ -16,7 +16,6 @@ header {
 body {
   overflow-x: hidden;
   max-width: 1870px;
-  min-width: 400px;
   margin: 0 auto;
 }
 
@@ -101,9 +100,56 @@ main {
   object-fit: cover;
 }
 
+#menu_global {
+  background-color: #f6f6f6;
+  margin-top: -192px;
+  border-radius: 80px 80px 0 0;
+  position: relative;
+}
+
 /*
  * section
  */
+section .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section h3 {
+  border-bottom: 4px solid #99e2d0;
+  width: 58px;
+  height: 41px;
+  font-size: 35px;
+  margin-left: 42px;
+}
+
+.carte {
+  position: relative;
+  height: 106px;
+  width: 472px;
+  border-radius: 21px;
+  box-shadow: 0px 0px 11px -2px #bdbdbd;
+  margin-bottom: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: fadeIn 1.2s 0.3s ease-in-out both, transform 0.3s;
+  animation: fadeIn 1.2s 0.3s ease-in-out both, transform 0.3s;
+  transition: all 1.5s;
+}
+.carte .plats {
+  width: 100%;
+}
+.carte .plats h4 {
+  width: 100%;
+  font-size: 22px;
+  margin: 0;
+  padding: 18px 0 0 29px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -126,89 +172,7 @@ main {
     opacity: 1;
   }
 }
-@-webkit-keyframes slide_titre {
-  0% {
-    width: 90%;
-  }
-  100% {
-    width: 65%;
-  }
-}
-@keyframes slide_titre {
-  0% {
-    width: 90%;
-  }
-  100% {
-    width: 65%;
-  }
-}
-@-webkit-keyframes slide {
-  0% {
-    width: 90%;
-  }
-  100% {
-    width: 75%;
-  }
-}
-@keyframes slide {
-  0% {
-    width: 90%;
-  }
-  100% {
-    width: 75%;
-  }
-}
-
-section .menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-section h3 {
-  border-bottom: 4px solid #99e2d0;
-  width: 58px;
-  height: 41px;
-  font-size: 35px;
-  margin-left: 42px;
-}
-#menu_global {
-  background-color: #f6f6f6;
-  margin-top: -400px;
-  border-radius: 80px 80px 0 0;
-  position: relative;
-}
-.carte {
-  position: relative;
-  height: 106px;
-  width: 472px;
-  border-radius: 21px;
-  box-shadow: 0px 0px 11px -2px #bdbdbd;
-  margin-bottom: 20px;
-  background-color: #fff;
-  cursor: pointer;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-animation: fadeIn 1.2s 0.3s ease-in-out both, transform 0.3s;
-  animation: fadeIn 1.2s 0.3s ease-in-out both, transform 0.3s;
-  transition: all 1.5s;
-}
-
-.carte .plats h4 {
-  font-size: 22px;
-  margin: 0;
-  padding: 18px 0 0 29px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.carte:hover h4 {
-  animation: slide_titre 0.5s ease-in;
-  width: 65%;
-  overflow: hidden;
-}
 .carte:hover > .menu_plats {
-  animation: slide 0.5s ease-in;
   width: 75%;
   overflow: hidden;
 }
@@ -228,6 +192,7 @@ section h3 {
 .menu_plats .txt {
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu_plats .prix {
   font-size: 18px;
@@ -338,4 +303,10 @@ a {
   margin: 14px 0 -4px 0;
   text-decoration: none;
   color: #fff;
+}
+
+/*
+Responsive
+*/
+@media screen and (max-width: 400px) {
 }
