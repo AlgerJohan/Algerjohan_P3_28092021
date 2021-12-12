@@ -173,7 +173,7 @@ section h3 {
 }
 #menu_global {
   background-color: #f6f6f6;
-  margin-top: -400px;
+  margin-top: -111px;
   border-radius: 80px 80px 0 0;
   position: relative;
 }
@@ -338,4 +338,19 @@ a {
   margin: 14px 0 -4px 0;
   text-decoration: none;
   color: #fff;
+}
+
+/*
+Responsive
+*/
+@media screen and (max-width: 500px) {
+  .titre h2 {
+    font-size: 28px;
+  }
+  .titre i {
+    font-size: 32px;
+  }
+  section {
+    margin: 11px;
+  }
 }
