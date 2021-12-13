@@ -277,7 +277,7 @@ section h3 {
   font-size: 25px;
   height: 80px;
   border-radius: 40px;
-  width: 36%;
+  width: 41%;
   box-shadow: 0px 1px 5px 0px grey;
   transition: 0.2s ease-in-out;
 }
@@ -345,12 +345,21 @@ Responsive
 */
 @media screen and (max-width: 500px) {
   .titre h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
   .titre i {
     font-size: 32px;
   }
   section {
     margin: 11px;
+  }
+  .carte {
+    margin-right: 19px;
+  }
+  #menu_global {
+    width: 364px;
+  }
+  #ohmyfood {
+    margin-left: 5px;
   }
 }
