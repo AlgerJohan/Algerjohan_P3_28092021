@@ -203,34 +203,31 @@ section h3 {
 }
 
 .carte:hover h4 {
-  animation: slide_titre 0.5s ease-in;
+  animation: slide_titre 0.8s ease-in;
   width: 65%;
   overflow: hidden;
 }
 .carte:hover > .menu_plats {
-  animation: slide 0.5s ease-in;
+  animation: slide 0.8s ease-in;
   width: 75%;
   overflow: hidden;
 }
 
 .carte:hover > .confirmation {
   visibility: visible;
-  transition: all 0.5s ease-in;
+  transition: all 0.8s ease-in;
   transform: translateX(-100%);
 }
 .checked {
-  /* animation: mouv infinite 3s linear; */
   transform: rotate(0deg);
 }
 .carte:hover .checked {
-  /* transform: rotate(0deg);
-  transition-duration: 0.5s; */
-  animation: mouv 0.5s ease-in-out;
+  animation: mouv 0.8s linear;
 }
 
 @keyframes mouv {
   from {
-    transform: rotate(134deg);
+    transform: rotate(-360deg);
   }
 
   to {
