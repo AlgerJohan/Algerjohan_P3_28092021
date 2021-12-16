@@ -218,7 +218,25 @@ section h3 {
   transition: all 0.5s ease-in;
   transform: translateX(-100%);
 }
+.checked {
+  /* animation: mouv infinite 3s linear; */
+  transform: rotate(0deg);
+}
+.carte:hover .checked {
+  /* transform: rotate(0deg);
+  transition-duration: 0.5s; */
+  animation: mouv 0.5s ease-in-out;
+}
 
+@keyframes mouv {
+  from {
+    transform: rotate(134deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
 .menu_plats {
   display: flex;
   justify-content: space-between;
@@ -323,7 +341,7 @@ footer h3 {
 #ohmyfood .proposer_restaurant p,
 #ohmyfood .devenir_partenaire p {
   padding-left: 14px;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
 }
 
