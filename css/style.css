@@ -265,11 +265,14 @@ main {
 }
 
 .icon_phone i,
-.icon_list i {
+.icon_list i,
+.icon_store i {
   color: #7e7e7e;
 }
 
-.icon_store i {
+.fa-mobile-alt:hover,
+.fa-list-ul:hover,
+.fa-store:hover {
   color: #9356dc;
 }
 
